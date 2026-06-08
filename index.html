@@ -1,0 +1,930 @@
+<!doctype html>
+<html class="text-white bg-[#0f2028]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="">
+ <header class="absolute top-0 left-0 w-full flex items-center justify-between px-6 py-4 md:px-10 md:py-5 text-white z-20">
+  
+  <!-- Logo -->
+  <a href="#" class="flex items-center gap-2">
+    <img
+      src="asset/img/general/logo.png"
+      alt="Logo TK PAUD Permata"
+      class="w-8 h-8 object-contain"
+    />
+    <span class="text-sm font-semibold tracking-wide uppercase leading-tight">
+      TK PAUD Permata
+    </span>
+  </a>
+
+  <!-- Nav Desktop -->
+  <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+    <a href="#" class="hover:text-orange-300 transition-colors">Beranda</a>
+    <a href="#" class="hover:text-orange-300 transition-colors">Program</a>
+    <a href="#" class="hover:text-orange-300 transition-colors">Galeri</a>
+    <a href="#" class="hover:text-orange-300 transition-colors">Kontak</a>
+  </nav>
+
+  <!-- Actions -->
+  <div class="flex items-center gap-3">
+    
+      <a href="#"
+      class="hidden sm:inline-flex items-center gap-1.5 bg-orange-400 hover:bg-orange-500 text-black text-sm font-semibold px-4 py-2 rounded-full transition-colors"
+    >
+      Brosur
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button
+      id="menu-toggle"
+      aria-label="Buka menu"
+      aria-expanded="false"
+      class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+    >
+      <span class="w-5 h-0.5 bg-white rounded transition-all"></span>
+      <span class="w-5 h-0.5 bg-white rounded transition-all"></span>
+      <span class="w-5 h-0.5 bg-white rounded transition-all"></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div
+  id="mobile-menu"
+  class="hidden fixed top-0 left-0 w-full h-screen bg-black/90 backdrop-blur-sm z-30 flex-col items-center justify-center gap-8 text-white text-xl font-medium"
+>
+  <button
+    id="menu-close"
+    aria-label="Tutup menu"
+    class="absolute top-5 right-6 text-3xl hover:text-orange-400 transition-colors"
+  >✕</button>
+
+  <a href="#" class="hover:text-orange-400 transition-colors">Beranda</a>
+  <a href="#" class="hover:text-orange-400 transition-colors">Program</a>
+  <a href="#" class="hover:text-orange-400 transition-colors">Galeri</a>
+  <a href="#" class="hover:text-orange-400 transition-colors">Kontak</a>
+
+  
+    <a href="#"
+    class="flex items-center gap-2 bg-orange-400 hover:bg-orange-500 text-black font-semibold px-6 py-3 rounded-full transition-colors"
+  >
+    Brosur
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
+  </a>
+</div>
+
+
+    <main class="m-3">
+      <!-- HOME SECTION START-->
+      <section
+        id="home"
+        class="relative h-screen overflow-hidden [clip-path:polygon(0_0,100%_0,100%_97%,0_100%)] mb-6"
+      >
+        <!-- VIDEO BACKGROUND -->
+        <video
+          src="asset/video/Beatushoehlen_Web-Header.mp4"
+          class="absolute inset-0 w-full h-full object-cover rounded-2xl"
+          autoplay
+          muted
+          loop
+        ></video>
+
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-black/40"></div>
+
+        <!-- CENTER TEXT -->
+        <div
+          class="absolute inset-0 flex items-center justify-center text-center text-white z-10"
+        >
+          <h1
+            class="text-3xl md:text-5xl font-light italic capitalize lg:w-1/2"
+          >
+            Selamat Datang di tk Paud Permata tigaraksa tangerang banten
+          </h1>
+        </div>
+
+        <!-- FLOAT CTA -->
+        <!-- <div class="absolute bottom-6 right-6 z-10">
+          <div
+            class="w-40 h-40 bg-sky-400 rounded-full flex items-center justify-center text-black text-xs font-bold text-center p-4 shadow-lg"
+          >
+            EXPERIENCE<br />
+            LINDA ELYS<br />
+            LIVE ON<br />
+            19.06.2026
+          </div>
+        </div> -->
+      </section>
+      <!-- HOME SECTION END -->
+
+      <!-- ABOUT SECTION START -->
+      <section
+        class="my-16 md:my-24 px-4 py-8 md:px-8 md:py-12 lg:px-16 lg:py-16 bg-primary rounded-2xl [clip-path:polygon(0_3%,100%_0,100%_100%,0_100%)]"
+        id="about"
+      >
+        <h2
+          class="text-center text-4xl font-bold px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-16"
+        >
+          About TK Paud Permata
+        </h2>
+        <div class="grid md:grid-cols-2 gap-3 mx-2 my-3 overflow-hidden">
+          <div class="flex justify-center">
+            <span
+              class="inline-block w-[10%] lg:w-[15%] h-1 border bg-orange-400 m-3"
+            ></span>
+            <p class="w-[90%] text-base md:text-lg">
+              TK Permata adalah sekolah taman kanak-kanak terbaik yang
+              berkomitmen mengasah potensi anak secara holistik melalui
+              lingkungan belajar yang menyenangkan. Sejak berdiri pada tahun
+              2011, kami fokus membentuk generasi yang cerdas, mandiri, berbudi
+              pekerti luhur, serta berakhlak mulia. Didukung fasilitas modern
+              yang aman—seperti ruang kelas interaktif dan area bermain yang
+              luas—kami menghadirkan metode pengajaran kreatif serta berbagai
+              ekstrakurikuler menarik. Kami juga aktif berkolaborasi dengan
+              berbagai institusi pendidikan untuk terus meningkatkan kualitas
+              pembelajaran demi menyiapkan masa depan unggul bagi setiap anak.
+            </p>
+          </div>
+          <div
+            class="max-w-3xs min-w-3xs max-h-40 min-h-40 mt-4 md:mt-0 mx-auto self-center bg-[#0f2028] relative before:content-[''] before:block before:w-0 before:h-1 before:bg-slate-300 before:absolute before:top-0 before:rounded-2xl before:animate-growWidth about-status"
+          >
+            <div class="px-6 p-7 opacity-100">
+              <h3 class="text-3xl">15+</h3>
+              <p class="opacity-85">
+                Telah berkerjasama dengan lebih dari 15 TK
+              </p>
+            </div>
+            <div class="px-6 p-7 hidden opacity-0">
+              <h3 class="text-3xl">11+</h3>
+              <p class="opacity-85">Telah berdiri lebih dari tahun</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ABOUT SECTION END -->
+
+      <!-- PROGRAM SECTION START -->
+      <section
+        id="program "
+        class="overflow-hidden my-16 md:my-24 px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-16"
+      >
+        <h2
+          class="text-center text-4xl font-bold md:px-10 lg:pb-20 pb-8 md:pb-12"
+        >
+          Program
+        </h2>
+        <div
+          class="grid sm:grid-cols- gap-3 mx-2 my-3 justify-items-center justify-evenly w-full"
+        >
+          <!-- Visis -->
+          <article
+            class="w-72 md:w-md lg:w-lg h-auto bg-primary shadow rounded-lg card-program [clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]"
+          >
+            <h3
+              class="font-bold text-center transition-all text-xl lg:text-2xl duration-30 py-1 mt-1 mb-0.5"
+            >
+              Visi
+            </h3>
+            <p
+              class="hidden opacity-0 transition-all duration-300 mb-2.5 mx-2 text-base md:text-lg"
+            >
+              Membangun anak-anak yang sehat jasmani dan rohani, berakhlak
+              mulia, kreatif, mandiri, dan bertanggung jawab.
+            </p>
+          </article>
+          <!-- Misi -->
+          <article
+            class="w-72 md:w-md lg:w-lg h-auto bg-primary shadow rounded-lg card-program [clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]"
+          >
+            <h3
+              class="font-bold text-center text-xl lg:text-2xl transition-all duration-30 py-1 mt-1 mb-0.5"
+            >
+              Misi
+            </h3>
+            <p
+              class="text-base md:text-lg transition-all duration-300 mb-2.5 mx-2"
+            >
+              Turut serta dalam usaha meningkatkan kualitas anak bangsa dalam
+              dunia pendidikan. Menyiapkan sumber daya anak yang berakhlak
+              mulia, patuh kepada kedua orang tua, taat pada agama, berbakti
+              pada nusa dan bangsa. Melakukan pendidikan dan pelatihan para guru
+              untuk terus berjalan dan menimba ilmu pengetahuan alam melengkapi
+              era globalisasi.
+            </p>
+          </article>
+          <!-- Kurikulum -->
+          <article
+            class="w-72 md:w-md lg:w-lg h-auto bg-primary shadow rounded-lg card-program [clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]"
+          >
+            <h3
+              class="font-bold text-center text-xl lg:text-2xl transition-all duration-30 py-1 mt-1 mb-0.5"
+            >
+              Kurikulum
+            </h3>
+            <p
+              class="hidden opacity-0 text-base md:text-lg transition-all duration-300 mb-2.5 mx-2"
+            >
+              Kurikulum TK permata disusun dengan setandar nasional kemnterian
+              yang dsesuaikan dengan perkembangan zaman serta kebutuhan peserta
+              didik
+            </p>
+          </article>
+
+          <!-- Visis -->
+          <article
+            class="w-72 md:w-md lg:w-lg h-auto bg-primary shadow rounded-lg card-program [clip-path:polygon(0_0,100%_0,100%_97%,0_100%)] overflow-hidden"
+          >
+            <h3
+              class="font-bold text-center text-xl lg:text-2xl transition-all duration-30 py-1 mt-1 mb-0.5"
+            >
+              Tujuan
+            </h3>
+            <p
+              class="hidden opacity-0 text-base md:text-lg transition-all duration-300 mb-2.5 mx-2"
+            >
+              Taman Kanak-Kanak Terpadu TK Permata bertujuan untuk membentuk
+              karakter anak Indonesia yang beriman dan bertakwa terhadap ajaran
+              agamanya, berakhlak mulia, mencintai ilmu, terampil dalam
+              mengembangkan ilmunya, kreatif, percaya diri, komunikatif,
+              memiliki kepedulian sosial, cinta lingkungan, serta berbudaya
+              bersih (life skill).
+            </p>
+          </article>
+        </div>
+      </section>
+      <!-- PROGRAM SECTION END -->
+
+      <!-- STRUKTUR SECTION START -->
+      <section
+        class="my-16 md:my-24 px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-16"
+        id="struktur"
+      >
+        <h2
+          class="text-center text-4xl font-bold px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-16"
+        >
+          Struktur Organisasi
+        </h2>
+        <div class="flex flex-wrap justify-evenly gap-5">
+          <!-- Bu Siti Rohil -->
+          <article
+            class="w-64 bg-mist-600 rounded-2xl shadow-[0_0_20px_rgba(255,255,255,0.2)] border border-white"
+          >
+            <img
+              src="asset/img/struktur/bu siti rohil1.png"
+              alt="bu siti rohil"
+              class="[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)] mx-auto h-80"
+            />
+            <div class="p-2.5">
+              <h4 class="text-center font-bold text-lg lg:text-xl">
+                Bu Siti Rohil, S.Pd
+              </h4>
+              <h3
+                class="text-center font-semibold opacity-90 text-xl lg:text-2xl -mt-0.5 mb-1.5"
+              >
+                Pemilik Yayasan
+              </h3>
+              <p class="text-base md:text-lg">
+                Memiliki pengalaman mengajar yang dimulai dari tahun 1997 hingga
+                saat ini, dan masih sangat aktif mengajar dengan berdedikasi.
+              </p>
+            </div>
+          </article>
+          <!-- Bu Ika -->
+          <article
+            class="w-64 bg-indigo-600 rounded-2xl shadow-[0_0_20px_rgba(255,255,255,0.2)] border border-white -mt-0.5 mb-1.5"
+          >
+            <img
+              src="asset/img/struktur/bu-ika1.png"
+              alt="bu Ika"
+              class="[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)] mx-auto h-80"
+            />
+            <div class="p-2.5">
+              <h4 class="text-center font-bold text-lg lg:text-xl">
+                Bu Asih Saika, S.Pd
+              </h4>
+              <h3
+                class="text-center font-semibold opacity-90 text-xl lg:text-2xl"
+              >
+                Kepala Sekolah Yayasan
+              </h3>
+              <p class="text-base md:text-lg">
+                Memiliki pengalaman mengajar dari tahun 2011 hingga sekarang.
+                Saat ini menjabat sebagai Kepala Sekolah di TK Permata, Pete -
+                Tigaraksa, Tangerang.
+              </p>
+            </div>
+          </article>
+          <!-- Bu Lisna -->
+          <article
+            class="w-64 bg-emerald-600 rounded-2xl shadow-[0_0_20px_rgba(255,255,255,0.2)] border border-white -mt-0.5 mb-1.5"
+          >
+            <img
+              src="asset/img/struktur/bu-lisna1.png"
+              alt="bu Lisdiana"
+              class="[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)] mx-auto h-80"
+            />
+            <div class="p-2.5">
+              <h4 class="text-center font-bold text-lg lg:text-xl">
+                Bu Lisdiana
+              </h4>
+              <h3
+                class="text-center font-semibold opacity-90 text-xl lg:text-2xl"
+              >
+                Guru
+              </h3>
+              <p class="text-base md:text-lg">
+                Memiliki pengalaman mengajar 1 tahun di RA Hasanudin, Cipanas -
+                Lebak. Dan sejak tahun 2021 mengajar di TK Permata, Pete -
+                Tigaraksa, Tangerang hingga sekarang.Serta bersetatus aktif
+                sebagai mahasiswa.
+              </p>
+            </div>
+          </article>
+          <!-- Bu Nia -->
+          <article
+            class="w-64 bg-amber-900 rounded-2xl shadow-[0_0_20px_rgba(255,255,255,0.2)] border border-white -mt-0.5 mb-1.5"
+          >
+            <img
+              src="asset/img/struktur/bu-nia1.png"
+              alt="bu Nia"
+              class="[clip-path:polygon(0_0,100%_0,100%_97%,0_100%)] mx-auto h-80"
+            />
+            <div class="p-2.5">
+              <h4 class="text-center font-bold text-lg lg:text-xl">Bu Nia</h4>
+              <h3
+                class="text-center font-semibold opacity-90 text-xl lg:text-2xl"
+              >
+                Guru
+              </h3>
+              <p class="text-base md:text-lg">
+                Memiliki pengalaman mengajar 2 tahun di TPQ, dan sejak tahun
+                2024 mengajar di TK Permata, Pete - Tigaraksa, Tangerang hingga
+                sekarang.Serta bersetatus aktif sebagai mahasiswa.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- STRUKTUR SECTION END -->
+
+      <!-- FAQ SECTION START -->
+      <section
+        class="my-16 md:my-24 px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-16 sm:w-[80%] md:w-[75%] lg:w-[70%] mx-auto"
+        id="faq"
+      >
+        <h2
+          class="text-4xl font-bold px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-16"
+        >
+          Pertanyaan Yang Sering Di Ajukan Terhadap Kami
+        </h2>
+
+        <div class=" ">
+          <article
+            class="border-t-[1px] border-b-[1px] border-teal-700 py-2 px-1 transition-all duration-300 faq-item"
+          >
+            <div class="flex justify-between">
+              <p class="text-base md:text-lg">Lorem ipsum dolor sit amet. ?</p>
+              <img
+                src="asset/svg/chevron-down-svgrepo-com.svg"
+                alt=""
+                class="w-3 h-3 block self-center transition-all duration-300"
+              />
+            </div>
+            <p
+              class="text-base md:text-lg hidden opacity-0 transition-all duration-300"
+            >
+              Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Corporis sed facere nostrum corrupti quia beatae
+              error fugit quas, laboriosam porro quis asperiores hic minima
+              labore eveniet provident nam libero esse.
+            </p>
+          </article>
+        </div>
+
+        <div></div>
+      </section>
+      <!-- FAQ SECTION END -->
+
+      <section
+        class="relative overflow-hidden mx-auto bg-[#002f3d] py-16 lg:py-32 h-[54vh] sm:h-[42vh] sm:w-[80%] lg:w-full lg:h-screen [clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]"
+      >
+        <!-- Lingkaran 1 -->
+        <img
+          src="asset/img/slide/slide-1.png"
+          class="absolute w-24 h-24 lg:w-48 lg:h-48 rounded-full object-cover border-4 border-lime-400 left-[1%] top-[78%] lg:left-32 lg:top-1/2 lg:animate-zigzag-reverse"
+        />
+
+        <!-- Lingkaran 2 -->
+        <img
+          src="asset/img/slide/slide-2.png"
+          class="absolute w-24 h-24 lg:w-48 lg:h-48 rounded-full object-cover border-4 border-amber-500 left-[20%] top-[80%] lg:left-[70%] lg:top-12 lg:animate-zigzag"
+        />
+
+        <!-- Lingkaran 3 -->
+        <img
+          src="asset/img/slide/slide-3.png"
+          class="absolute w-24 h-24 lg:w-48 lg:h-48 rounded-full object-cover border-4 border-cyan-400 left-[40%] top-[78%] lg:left-36 lg:top-10 lg:animate-zigzag"
+        />
+
+        <!-- Lingkaran 4 -->
+        <img
+          src="asset/img/slide/slide-4.png"
+          class="absolute w-24 h-24 lg:w-48 lg:h-48 rounded-full object-cover border-4 border-amber-500 left-[58%] top-[78%] lg:left-1/2 lg:bottom-10 lg:-translate-x-1/2 lg:animate-zigzag-reverse"
+        />
+
+        <!-- Lingkaran 5 -->
+        <img
+          src="asset/img/slide/slide-5.png"
+          class="absolute w-24 h-24 lg:w-48 lg:h-48 rounded-full object-cover border-4 border-amber-500 left-[76%] top-[78%] lg:right-20 lg:top-1/2 lg:animate-zigzag"
+        />
+
+        <div class="flex place-items-center h-full">
+          <div class="container mx-auto px-6 lg:w-[50%]">
+            <p class="text-center text-yellow-400 italic">Woooooow!</p>
+
+            <h2 class="text-4xl font-bold mx-auto text-center uppercase">
+              Tempat Terbaik untuk Tumbuh dan Berkembang Bersama
+            </h2>
+
+            <div
+              class="mt-8 flex flex-wrap justify-center gap-3 text-base md:text-lg"
+            >
+              <button class="px-5 py-2 rounded-full bg-sky-600 text-white">
+                Kemandirian
+              </button>
+
+              <button
+                class="px-5 py-2 rounded-full bg-sky-600 text-white text-base md:text-lg"
+              >
+                Kejujuran
+              </button>
+
+              <button
+                class="px-5 py-2 rounded-full bg-sky-600 text-white text-base md:text-lg"
+              >
+                Kerjasama
+              </button>
+
+              <button
+                class="px-5 py-2 rounded-full bg-sky-600 text-white text-base md:text-lg"
+              >
+                Beriman
+              </button>
+
+              <button
+                class="px-5 py-2 rounded-full bg-sky-600 text-white text-base md:text-lg"
+              >
+                Berakhlak
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INFO LEBIH LANUT SECTION START -->
+      <section
+        class="my-16 md:my-24 px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-16"
+      >
+        <h2
+          class="text-4xl text-center font-bold px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-16"
+        >
+          Ikuti Kami Untuk Informasi Lebih Lanjut
+        </h2>
+        <div>
+          <h3
+            class="text-center font-semibold opacity-90 text-xl lg:text-2xl -mt-0.5 mb-9 text-yellow-500"
+          >
+            Keseruan Kami
+          </h3>
+
+          <div class="overflow-hidden">
+            <div class="flex flex-row gap-6 track">
+              <!-- Video -->
+              <div
+                class="w-28 md:w-36 lg:w-50 aspect-[9/16] rounded-xl overflow-hidden shrink-0"
+              >
+                <video
+                  src="asset/video/Beatushoehlen_Web-Header.mp4"
+                  class="w-full h-full object-cover"
+                ></video>
+              </div>
+
+              <!-- Foto -->
+              <div
+                class="w-28 md:w-30 lg:w-46 aspect-[3/4] rounded-xl overflow-hidden shrink-0 self-center"
+              >
+                <img
+                  src="asset/img/general/home.png"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- Video -->
+              <div
+                class="w-28 md:w-36 lg:w-50 aspect-[9/16] rounded-xl overflow-hidden shrink-0"
+              >
+                <video
+                  src="asset/video/Beatushoehlen_Web-Header.mp4"
+                  class="w-full h-full object-cover"
+                ></video>
+              </div>
+
+              <!-- Foto -->
+              <div
+                class="w-28 md:w-30 lg:w-46 aspect-[3/4] rounded-xl overflow-hidden shrink-0 self-center"
+              >
+                <img
+                  src="asset/img/general/home.png"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- Video -->
+              <div
+                class="w-28 md:w-36 lg:w-50 aspect-[9/16] rounded-xl overflow-hidden shrink-0"
+              >
+                <video
+                  src="asset/video/Beatushoehlen_Web-Header.mp4"
+                  class="w-full h-full object-cover"
+                ></video>
+              </div>
+
+              <!-- Foto -->
+              <div
+                class="w-28 md:w-30 lg:w-46 aspect-[3/4] rounded-xl overflow-hidden shrink-0 self-center"
+              >
+                <img
+                  src="asset/img/general/home.png"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- Video -->
+              <div
+                class="w-28 md:w-36 lg:w-50 aspect-[9/16] rounded-xl overflow-hidden shrink-0"
+              >
+                <video
+                  src="asset/video/Beatushoehlen_Web-Header.mp4"
+                  class="w-full h-full object-cover"
+                ></video>
+              </div>
+
+              <!-- Foto -->
+              <div
+                class="w-28 md:w-30 lg:w-46 aspect-[3/4] rounded-xl overflow-hidden shrink-0 self-center"
+              >
+                <img
+                  src="asset/img/general/home.png"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- Video -->
+              <div
+                class="w-28 md:w-36 lg:w-50 aspect-[9/16] rounded-xl overflow-hidden shrink-0"
+              >
+                <video
+                  src="asset/video/Beatushoehlen_Web-Header.mp4"
+                  class="w-full h-full object-cover"
+                ></video>
+              </div>
+
+              <!-- Foto -->
+              <div
+                class="w-28 md:w-30 lg:w-46 aspect-[3/4] rounded-xl overflow-hidden shrink-0 self-center"
+              >
+                <img
+                  src="asset/img/general/home.png"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- Video -->
+              <div
+                class="w-28 md:w-36 lg:w-50 aspect-[9/16] rounded-xl overflow-hidden shrink-0"
+              >
+                <video
+                  src="asset/video/Beatushoehlen_Web-Header.mp4"
+                  class="w-full h-full object-cover"
+                ></video>
+              </div>
+
+              <!-- Foto -->
+              <div
+                class="w-28 md:w-30 lg:w-46 aspect-[3/4] rounded-xl overflow-hidden shrink-0 self-center"
+              >
+                <img
+                  src="asset/img/general/home.png"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- Video -->
+              <div
+                class="w-28 md:w-36 lg:w-50 aspect-[9/16] rounded-xl overflow-hidden shrink-0"
+              >
+                <video
+                  src="asset/video/Beatushoehlen_Web-Header.mp4"
+                  class="w-full h-full object-cover"
+                ></video>
+              </div>
+
+              <!-- Foto -->
+              <div
+                class="w-28 md:w-30 lg:w-46 aspect-[3/4] rounded-xl overflow-hidden shrink-0 self-center"
+              >
+                <img
+                  src="asset/img/general/home.png"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- INFO LEBIH LANUT SECTION END -->
+
+      <!-- TEMPAT BELAJAR SECTION START -->
+      <section
+        class="my-16 md:my-24 px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-16"
+      >
+        <div class="container mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold">Tempat Belajar Kami</h2>
+          </div>
+
+          <div
+            class="grid grid-cols-2 grid-rows-[260px_200px] gap-3 max-w-2xl mx-auto"
+          >
+            <!-- Card 1 — full width -->
+            <div
+              class="group col-span-2 relative rounded-2xl overflow-hidden cursor-pointer"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                alt="Belajar Bersama"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col justify-end p-6"
+              >
+                <h3 class="text-white font-bold text-xl">Belajar Bersama</h3>
+                <p
+                  class="text-white/80 text-sm overflow-hidden max-h-0 opacity-0 transition-all duration-300 group-hover:max-h-20 group-hover:opacity-100"
+                >
+                  Aktivitas belajar yang menyenangkan untuk anak-anak.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="group relative rounded-2xl overflow-hidden cursor-pointer"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                alt="Kreativitas"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col justify-end p-5"
+              >
+                <h3 class="text-white font-bold text-lg">Kreativitas</h3>
+                <p
+                  class="text-white/80 text-sm overflow-hidden max-h-0 opacity-0 transition-all duration-300 group-hover:max-h-20 group-hover:opacity-100"
+                >
+                  Menggambar, mewarnai, dan berkarya bersama.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="group relative rounded-2xl overflow-hidden cursor-pointer"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                alt="Bermain Bersama"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col justify-end p-5"
+              >
+                <h3 class="text-white font-bold text-lg">Bermain Bersama</h3>
+                <p
+                  class="text-white/80 text-sm overflow-hidden max-h-0 opacity-0 transition-all duration-300 group-hover:max-h-20 group-hover:opacity-100"
+                >
+                  Melatih motorik dan kerja sama antar teman.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- TEMPAT BELAJAR SECTION END -->
+
+      <!-- CONTACT SECTION START -->
+      <section id="contact" class="py-20 bg-[#0f2028] text-white">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="text-center mb-12">
+            <p class="text-cyan-400 text-base md:text-lg font-medium">
+              Hubungi Kami
+            </p>
+
+            <h2 class="text-4xl text-center font-bold mt-2">
+              Mari Terhubung Bersama
+            </h2>
+
+            <p
+              class="text-slate-300 text-base md:text-lg mt-4 max-w-xl mx-auto"
+            >
+              Kami siap membantu menjawab pertanyaan Anda mengenai program,
+              pendaftaran, maupun informasi lainnya.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-8">
+            <!-- Info -->
+            <div
+              class="bg-primary backdrop-blur-sm border border-white/10 rounded-3xl p-8"
+            >
+              <h3 class="text-2xl font-semibold mb-6">Informasi Kontak</h3>
+
+              <div class="space-y-6">
+                <div>
+                  <p class="text-cyan-400 text-base md:text-lg font-medium">
+                    Alamat
+                  </p>
+                  <p class="text-slate-300 text-base md:text-lg">
+                    Pete, Tigaraksa, Tangerang, Banten
+                  </p>
+                </div>
+
+                <div>
+                  <p class="text-cyan-400 text-base md:text-lg font-medium">
+                    Telepon
+                  </p>
+                  <a
+                    href="https://wa.me/6285692590096"
+                    class="text-slate-300 text-base md:text-lg"
+                    >+62 856-9259-0096</a
+                  >
+                </div>
+
+                <div>
+                  <p class="text-cyan-400 text-base md:text-lg font-medium">
+                    Email
+                  </p>
+                  <a
+                    href="mailto:yayasanrayfi@gmail.com"
+                    class="text-slate-300 text-base md:text-lg"
+                    >yayasanrayfi@gmail.com</a
+                  >
+                </div>
+              </div>
+
+              <iframe
+                src="https://maps.google.com/maps?q=-6.2547222,106.4549444&z=15&output=embed"
+                class="w-full h-64 rounded-2xl mt-8"
+                loading="lazy"
+              ></iframe>
+            </div>
+
+            <!-- Form -->
+            <form
+              class="bg-primary backdrop-blur-sm border border-white/10 rounded-3xl p-8"
+            >
+              <div class="space-y-5">
+                <input
+                  type="text"
+                  placeholder="Nama Lengkap"
+                  class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/10 outline-none focus:border-cyan-400"
+                />
+
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/10 outline-none focus:border-cyan-400"
+                />
+
+                <input
+                  type="tel"
+                  placeholder="Nomor Telepon"
+                  class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/10 outline-none focus:border-cyan-400"
+                />
+
+                <textarea
+                  rows="5"
+                  placeholder="Pesan"
+                  class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/10 outline-none focus:border-cyan-400 resize-none"
+                ></textarea>
+
+                <button
+                  class="w-full py-3 text-base md:text-lg rounded-xl bg-cyan-500 hover:bg-cyan-600 transition-colors font-medium"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- CONTACT SECTION END -->
+    </main>
+
+    <footer class="bg-[#002733] text-white">
+      <div class="max-w-6xl mx-auto px-6 py-16">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <!-- Logo -->
+          <div>
+            <h3 class="text-2xl font-bold">TK Paud Permata</h3>
+
+            <p class="mt-4 text-slate-300">
+              Tempat anak belajar, bermain, dan berkembang dalam lingkungan yang
+              aman, nyaman, dan menyenangkan.
+            </p>
+          </div>
+
+          <!-- Menu -->
+          <div>
+            <h4 class="font-semibold text-lg mb-4">Menu</h4>
+
+            <ul class="space-y-3 text-slate-300">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#program">Program</a></li>
+              <li><a href="#gallery">Paq</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Kontak -->
+          <div>
+            <h4 class="font-semibold text-lg mb-4">Kontak</h4>
+
+            <ul class="space-y-3 text-slate-300">
+              <li>📍 Pete, Tigaraksa, Tangerang</li>
+              <li>
+                📞 <a href="https://wa.me/6285692590096">62+85692590096</a>
+              </li>
+              <li>
+                ✉️
+                <a href="mailto:yayasanrayfi@gmail.com"
+                  >yayasanrayfi@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Sosial Media -->
+          <div>
+            <h4 class="font-semibold text-lg mb-4">Ikuti Kami</h4>
+
+            <div class="flex gap-4">
+              <a
+                href="mailto:yayasanrayfi@gmail.com"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition-transform duration-300 hover:-translate-y-2"
+              >
+                <img src="asset/svg/gmail-svgrepo-com.svg" alt="" class="w-6" />
+              </a>
+
+              <a
+                href="https://www.tiktok.com/@yayasanrayfitkpermata?_r=1&_t=ZS-95Uz27c1EE1"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition-transform duration-300 hover:-translate-y-2"
+              >
+                <img
+                  src="asset/svg/tiktok-icon-black-1-logo-svgrepo-com.svg"
+                  alt=""
+                  class="w-6"
+                />
+              </a>
+
+              <a
+                href="https://wa.me/6285692590096"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition-transform duration-300 hover:-translate-y-2"
+              >
+                <img
+                  src="asset/svg/whatsapp-svgrepo-com.svg"
+                  alt=""
+                  class="w-6"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-white/10 mt-12 pt-6">
+          <p class="text-center text-slate-400 text-sm">
+            © 2026 TK PAUD Permata. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
