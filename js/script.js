@@ -259,6 +259,7 @@ const contactLogic = () => {
 Nama   : ${inputTextEl.value}
 Gmail  : ${inputGmailEl.value}
 No Tlp : ${inputNoTlpEl.value}
+
 Pesan  : ${textAreaEl.value}
       `;
 
