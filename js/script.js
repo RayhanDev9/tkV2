@@ -256,10 +256,10 @@ const contactLogic = () => {
 
     btnSendEl.addEventListener("click", () => {
       const message = `
-      Nama : ${inputTextEl.value}
-      Gmail : ${inputGmailEl.value}
-      No Tlp : ${inputNoTlpEl.value}
-      Pesan : ${textAreaEl.value}
+Nama   : ${inputTextEl.value}
+Gmail  : ${inputGmailEl.value}
+No Tlp : ${inputNoTlpEl.value}
+Pesan  : ${textAreaEl.value}
       `;
 
       window.open(
