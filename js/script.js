@@ -301,20 +301,33 @@ const animasiScrollLogic = () => {
   function animasiScrollSectionAndH() {
     const containers = document.querySelectorAll(".reveal");
 
-   
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate-animasi-scroll");
-        }
-      });
+    containers.forEach((el, i) => {
+      el.classList.add(
+        "opacity-0",
+        "translate-y-3",
+        "transition-all",
+        "duration-700",
+      );
     });
 
-    containers.forEach((container) => {
-      observer.observe(container);
-     
-      
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100", "translate-y-0");
+            entry.target.classList.remove("opacity-0", "translate-y-3");
+          } else {
+            entry.target.classList.add("opacity-0", "translate-y-3");
+            entry.target.classList.remove("opacity-100", "translate-y-0");
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      },
+    );
+
+    containers.forEach((el) => observer.observe(el));
   }
 
   animasiScrollSectionAndH();
@@ -322,21 +335,35 @@ const animasiScrollLogic = () => {
   function animasiScrollParaghrap() {
     const containers = document.querySelectorAll(".reveal-paraghrap");
 
+    containers.forEach((el, i) => {
+      el.classList.add(
+        "opacity-0",
+        "translate-y-3",
+        "transition-all",
+        "duration-700",
+      );
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate-animasi-scroll-paraghrap");
-        }
-      });
+      el.style.transitionDelay = `${i * 120}ms`;
     });
 
-    setTimeout(() => {
-      containers.forEach((container) => {
-        observer.observe(container);
-         container.classList.add("opacity-100");
-      });
-    }, 400);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100", "translate-y-0");
+            entry.target.classList.remove("opacity-0", "translate-y-3");
+          } else {
+            entry.target.classList.add("opacity-0", "translate-y-3");
+            entry.target.classList.remove("opacity-100", "translate-y-0");
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      },
+    );
+
+    containers.forEach((el) => observer.observe(el));
   }
 
   animasiScrollParaghrap();
