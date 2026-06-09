@@ -9,9 +9,7 @@ const headerLogic = () => {
         "top-0",
         "left-0",
         "z-50",
-        "w-full",
         "backdrop-blur-sm",
-        // "bg-wihite",
         "shadow-lg",
       );
     } else {
@@ -21,7 +19,6 @@ const headerLogic = () => {
         "left-0",
         "z-50",
         "backdrop-blur-sm",
-        "bg-primary",
         "shadow-lg",
       );
       console.info("ok");
