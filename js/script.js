@@ -240,6 +240,40 @@ const faqLogic = () => {
 
 faqLogic();
 
+const contactLogic = () => {
+  function sendMessage() {
+    const inputTextEl = document.querySelector(
+      '#contact-form input[type="text"]',
+    );
+    const inputGmailEl = document.querySelector(
+      '#contact-form input[type="email"]',
+    );
+    const inputNoTlpEl = document.querySelector(
+      '#contact-form input[type="tel"]',
+    );
+    const textAreaEl = document.querySelector("#contact-form textarea");
+    const btnSendEl = document.querySelector("#contact-form button");
+
+    btnSendEl.addEventListener("click", () => {
+      const message = `
+      Nama : ${inputTextEl.value}
+      Gmail : ${inputGmailEl.value}
+      No Tlp : ${inputNoTlpEl.value}
+      Pesan : ${textAreaEl.value}
+      `;
+
+      window.open(
+        `https://wa.me/6285692590096?text=${encodeURIComponent(message)}`,
+        "_blank",
+      );
+    });
+  }
+
+  sendMessage();
+};
+
+contactLogic();
+
 const animasiLogic = () => {
   const track = document.querySelector(".track");
 
