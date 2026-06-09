@@ -84,7 +84,7 @@ const aboutLogic = () => {
       }
     });
     cnt = cnt === aboutStatusChildEl.length ? 1 : cnt + 1;
-  }, 2550);
+  }, 2500);
 };
 
 aboutLogic();
