@@ -123,26 +123,119 @@ const programLogic = () => {
 programLogic();
 
 const faqLogic = () => {
-  const faqItem = document.querySelectorAll(".faq-item");
+  const data = [
+    {
+      question: "Berapa usia minimal untuk masuk ?",
+      answer: "Usia minimal 4 tahun pada awal tahun ajaran baru.",
+    },
+    {
+      question: "Apa saja syarat pendaftaran ?",
+      answer:
+        "Usia anak minimal 4 tahun pada awal tahun ajaran baru, fotokopi akta kelahiran, kartu keluarga, KTP ayah ibu.",
+    },
+    {
+      question: "Berapa biaya pendaftaran dan uang sekolah ?",
+      answer:
+        "Biaya awal masuk sebesar Rp 470.000, yang sudah mencakup seragam batik, seragam olahraga, busana muslim/muslimah, pensil warna, dan buku gambar. Adapun SPP bulanan sebesar Rp 60.000.",
+    },
+    {
+      question: "Apa kurikulum yang digunakan ?",
+      answer:
+        "Kurikulum TK Permata mengacu pada Standar Nasional Pendidikan Kementerian Pendidikan dan Kebudayaan serta disesuaikan dengan perkembangan zaman dan kebutuhan peserta didik.",
+    },
+    {
+      question: "Jam belajar dimulai dan berakhir pukul berapa ?",
+      answer: "Kegiatan belajar mengajar dimulai pukul 07.45 hingga 10.20 WIB.",
+    },
+    {
+      question:
+        "Bagaimana jika anak belum mandiri atau masih sering menangis ?",
+      answer:
+        "Guru akan membantu proses adaptasi anak secara bertahap agar merasa nyaman di lingkungan sekolah.",
+    },
+    {
+      question: "Apakah ada pembelajaran mengaji dan hafalan doa ?",
+      answer:
+        "Ya, anak akan dikenalkan doa harian, surat-surat pendek, serta nilai-nilai Islami sesuai usia mereka.",
+    },
+  ];
 
-  faqItem.forEach((item) => {
-    item.addEventListener("click", () => {
-      const pHiddden = item.querySelector("article > p");
-      const svg = item.querySelector("img");
+  function loopingFaq() {
+    const containerFaq = document.querySelector(".container-faq");
 
-      const isOpen = pHiddden.classList.contains("hidden");
+    data.forEach((item) => {
+      const html = `<article
+            class="border-t-[1px] border-b-[1px] border-teal-700 py-2 px-1 transition-all duration-300 faq-item"
+          >
+            <div class="flex justify-between">
+              <p class="text-base md:text-lg"> ${item.question} </p>
+              <img
+                src="asset/svg/chevron-down-svgrepo-com.svg"
+                alt=""
+                class="w-3 h-3 block self-center transition-all duration-300"
+              />
+            </div>
+            <p
+              class="text-base md:text-lg hidden opacity-0 transition-all duration-300"
+            >
+              ${item.answer}
+            </p>
+          </article>`;
 
-      if (isOpen) {
-        pHiddden.classList.remove("hidden");
-        pHiddden.classList.remove("opacity-0");
-        svg.classList.add("rotate-180");
-      } else {
-        pHiddden.classList.add("hidden");
-        pHiddden.classList.add("opacity-0");
-        svg.classList.remove("rotate-180");
-      }
+      containerFaq.insertAdjacentHTML("beforeend", html);
     });
-  });
+  }
+
+  loopingFaq();
+
+  function toggleFaq() {
+    const faqItem = document.querySelectorAll(".faq-item");
+    let lastClickedItem;
+    let clickCount = 1;
+    faqItem.forEach((item) => {
+      item.addEventListener("click", function (e) {
+        faqItem.forEach((item) => {
+          const pHiddden = item.querySelector("article > p");
+          const svg = item.querySelector("img");
+
+          const isOpen = pHiddden.classList.contains("hidden");
+
+          if (!isOpen) {
+            pHiddden.classList.add("hidden");
+            pHiddden.classList.add("opacity-0");
+            svg.classList.remove("rotate-180");
+          }
+        });
+
+        const pHiddden = item.querySelector("article > p");
+        const svg = item.querySelector("img");
+
+        const isOpen = pHiddden.classList.contains("hidden");
+
+        if (isOpen) {
+          pHiddden.classList.remove("hidden");
+          pHiddden.classList.remove("opacity-0");
+          svg.classList.add("rotate-180");
+        } else {
+          pHiddden.classList.add("hidden");
+          pHiddden.classList.add("opacity-0");
+          svg.classList.remove("rotate-180");
+        }
+
+        if (lastClickedItem === this && !(clickCount === 2)) {
+          pHiddden.classList.add("hidden");
+          pHiddden.classList.add("opacity-0");
+          svg.classList.remove("rotate-180");
+          clickCount += 1;
+        } else {
+          lastClickedItem = this;
+          clickCount = 1;
+        }
+      });
+    });
+  }
+
+  toggleFaq();
 };
 
 faqLogic();
