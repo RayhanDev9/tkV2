@@ -46,7 +46,7 @@ const humbergerLogic = () => {
       menu.classList.add("hidden");
       menu.classList.remove("flex");
       toggle.setAttribute("aria-expanded", "false");
-      console.info('ok')
+      console.info("ok");
     });
   });
 
@@ -64,26 +64,30 @@ const aboutLogic = () => {
     ...document.querySelectorAll(".about-status > div"),
   ];
 
+  let cnt = 2;
   setInterval(() => {
     aboutStatusChildEl.forEach((child) => {
       const isHidden = child.classList.contains("hidden");
-
-      if (isHidden) {
-        child.classList.remove("hidden");
-        child.classList.add("opacity-100");
-        child.classList.remove("opacity-0");
-
-        console.info(true);
-      }
       if (!isHidden) {
         child.classList.add("hidden");
         child.classList.add("opacity-0");
         child.classList.remove("opacity-100");
+      }
 
-        console.info(false);
+      const id = Number(child.dataset.idAbout);
+
+      if (cnt === id) {
+        if (isHidden) {
+          child.classList.remove("hidden");
+          child.classList.add("opacity-100");
+          child.classList.remove("opacity-0");
+
+          console.info(true);
+        }
       }
     });
-  }, 2500);
+    cnt = cnt === aboutStatusChildEl.length ? 1 : cnt + 1;
+  }, 2550);
 };
 
 aboutLogic();
