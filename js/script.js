@@ -1,3 +1,64 @@
+const headerLogic = () => {
+  const navbar = document.querySelector("header");
+  const navTop = navbar.offsetTop;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > navTop) {
+      navbar.classList.add(
+        "fixed",
+        "top-0",
+        "left-0",
+        "z-50",
+        "w-full",
+        "backdrop-blur-sm",
+        // "bg-wihite",
+        "shadow-lg",
+      );
+    } else {
+      navbar.classList.remove(
+        "fixed",
+        "top-0",
+        "left-0",
+        "z-50",
+        "backdrop-blur-sm",
+        "bg-primary",
+        "shadow-lg",
+      );
+      console.info("ok");
+    }
+  });
+};
+headerLogic();
+
+const humbergerLogic = () => {
+  const toggle = document.getElementById("menu-toggle");
+  const close = document.getElementById("menu-close");
+  const menu = document.getElementById("mobile-menu");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.remove("hidden");
+    menu.classList.add("flex");
+    toggle.setAttribute("aria-expanded", "true");
+  });
+
+  menu.querySelectorAll(".nav-link").forEach((item) => {
+    item.addEventListener("click", () => {
+      menu.classList.add("hidden");
+      menu.classList.remove("flex");
+      toggle.setAttribute("aria-expanded", "false");
+      console.info('ok')
+    });
+  });
+
+  close.addEventListener("click", () => {
+    menu.classList.add("hidden");
+    menu.classList.remove("flex");
+    toggle.setAttribute("aria-expanded", "false");
+  });
+};
+
+humbergerLogic();
+
 const aboutLogic = () => {
   const aboutStatusChildEl = [
     ...document.querySelectorAll(".about-status > div"),
@@ -106,23 +167,3 @@ const animasiLogic = () => {
 };
 
 animasiLogic();
-
-const humbergerLogic = () => {
-  const toggle = document.getElementById("menu-toggle");
-  const close = document.getElementById("menu-close");
-  const menu = document.getElementById("mobile-menu");
-
-  toggle.addEventListener("click", () => {
-    menu.classList.remove("hidden");
-    menu.classList.add("flex");
-    toggle.setAttribute("aria-expanded", "true");
-  });
-
-  close.addEventListener("click", () => {
-    menu.classList.add("hidden");
-    menu.classList.remove("flex");
-    toggle.setAttribute("aria-expanded", "false");
-  });
-};
-
-humbergerLogic();

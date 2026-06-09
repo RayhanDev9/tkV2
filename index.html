@@ -10,7 +10,7 @@
   <body class="">
     <!-- Header -->
     <header
-      class="absolute top-0 left-0 w-full flex items-center justify-between px-6 py-4 md:px-10 md:py-5 text-white z-20"
+      class="absolute top-0 left-0 w-full flex items-center justify-between px-6 py-4 md:px-10 md:py-5 text-white z-20 transition-all duration-300"
     >
       <!-- Logo -->
       <a href="#" class="flex items-center gap-2">
@@ -39,6 +39,11 @@
           >Struktur</a
         >
         <a href="#faq" class="hover:text-orange-300 transition-colors">FAQ</a>
+        <a
+          href="#gallery"
+          class="hover:text-orange-300 transition-colors nav-link"
+          >Gallery</a
+        >
         <a href="#contact" class="hover:text-orange-300 transition-colors"
           >Contact</a
         >
@@ -48,7 +53,8 @@
       <div class="flex items-center gap-3">
         <a
           href="asset/img/general/brosur.pdf"
-          class="hidden sm:inline-flex items-center gap-1.5 bg-orange-400 hover:bg-orange-500 text-black text-sm font-semibold px-4 py-2 rounded-full transition-colors" download
+          class="hidden sm:inline-flex items-center gap-1.5 bg-orange-400 hover:bg-orange-500 text-black text-sm font-semibold px-4 py-2 rounded-full transition-colors"
+          download
         >
           Brosur
           <svg
@@ -104,24 +110,41 @@
           ✕
         </button>
 
-        <a href="#home" class="hover:text-orange-300 transition-colors">Home</a>
-        <a href="#about" class="hover:text-orange-300 transition-colors"
+        <a href="#home" class="hover:text-orange-300 transition-colors nav-link"
+          >Home</a
+        >
+        <a
+          href="#about"
+          class="hover:text-orange-300 transition-colors nav-link"
           >About</a
         >
-        <a href="#program" class="hover:text-orange-300 transition-colors"
+        <a
+          href="#program"
+          class="hover:text-orange-300 transition-colors nav-link"
           >Program</a
         >
-        <a href="#struktur" class="hover:text-orange-300 transition-colors"
+        <a
+          href="#struktur"
+          class="hover:text-orange-300 transition-colors nav-link"
           >Struktur</a
         >
-        <a href="#faq" class="hover:text-orange-300 transition-colors">FAQ</a>
-        <a href="#contact" class="hover:text-orange-300 transition-colors"
+        <a href="#faq" class="hover:text-orange-300 transition-colors nav-link"
+          >FAQ</a
+        >
+        <a
+          href="#gallery"
+          class="hover:text-orange-300 transition-colors nav-link"
+          >Gallery</a
+        >
+        <a
+          href="#contact"
+          class="hover:text-orange-300 transition-colors nav-link"
           >Contact</a
         >
 
         <a
           href="#"
-          class="flex items-center gap-2 bg-orange-400 hover:bg-orange-500 text-black font-semibold px-6 py-3 rounded-full transition-colors"
+          class="flex items-center gap-2 bg-orange-400 hover:bg-orange-500 text-black font-semibold px-6 py-3 rounded-full transition-colors nav-link"
         >
           Brosur
           <svg
@@ -144,7 +167,7 @@
       <!-- HOME SECTION START-->
       <section
         id="home"
-        class="relative h-screen overflow-hidden [clip-path:polygon(0_0,100%_0,100%_97%,0_100%)] mb-6"
+        class="relative h-screen overflow-hidden [clip-path:polygon(0_0,100%_0,100%_97%,0_100%)] mb-6 scroll-mt-20"
       >
         <!-- VIDEO BACKGROUND -->
         <video
@@ -185,7 +208,7 @@
 
       <!-- ABOUT SECTION START -->
       <section
-        class="my-16 md:my-24 px-4 py-8 md:px-8 md:py-12 lg:px-16 lg:py-16 bg-primary rounded-2xl [clip-path:polygon(0_3%,100%_0,100%_100%,0_100%)]"
+        class="my-16 md:my-24 px-4 py-8 md:px-8 md:py-12 lg:px-16 lg:py-16 bg-primary rounded-2xl [clip-path:polygon(0_3%,100%_0,100%_100%,0_100%)] scroll-mt-20"
         id="about"
       >
         <h2
@@ -231,7 +254,7 @@
 
       <!-- PROGRAM SECTION START -->
       <section
-        class="overflow-hidden my-16 md:my-24 px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-16"
+        class="overflow-hidden my-16 md:my-24 px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-16 scroll-mt-20"
         id="program"
       >
         <h2
@@ -252,7 +275,7 @@
               Visi
             </h3>
             <p
-              class="hidden opacity-0 transition-all duration-300 mb-2.5 mx-2 text-base md:text-lg"
+              class="transition-all duration-300 mb-2.5 mx-2 text-base md:text-lg"
             >
               Membangun anak-anak yang sehat jasmani dan rohani, berakhlak
               mulia, kreatif, mandiri, dan bertanggung jawab.
@@ -268,7 +291,7 @@
               Misi
             </h3>
             <p
-              class="text-base md:text-lg transition-all duration-300 mb-2.5 mx-2"
+              class="hidden opacity-0 text-base md:text-lg transition-all duration-300 mb-2.5 mx-2"
             >
               Turut serta dalam usaha meningkatkan kualitas anak bangsa dalam
               dunia pendidikan. Menyiapkan sumber daya anak yang berakhlak
@@ -322,7 +345,7 @@
 
       <!-- STRUKTUR SECTION START -->
       <section
-        class="my-16 md:my-24 px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-16"
+        class="my-16 md:my-24 px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-16 scroll-mt-20"
         id="struktur"
       >
         <h2
@@ -435,7 +458,7 @@
 
       <!-- FAQ SECTION START -->
       <section
-        class="my-16 md:my-24 px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-16 sm:w-[80%] md:w-[75%] lg:w-[70%] mx-auto"
+        class="my-16 md:my-24 px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-16 sm:w-[80%] md:w-[75%] lg:w-[70%] mx-auto scroll-mt-20"
         id="faq"
       >
         <h2
@@ -472,7 +495,8 @@
       <!-- FAQ SECTION END -->
 
       <section
-        class="relative overflow-hidden mx-auto bg-[#002f3d] py-16 lg:py-32 h-[54vh] sm:h-[42vh] sm:w-[80%] lg:w-full lg:h-screen [clip-path:polygon(0_0,100%_0,100%_97%,0_100%)]"
+        class="relative overflow-hidden mx-auto bg-[#002f3d] py-16 lg:py-32 h-[54vh] sm:h-[42vh] sm:w-[80%] lg:w-full lg:h-screen [clip-path:polygon(0_0,100%_0,100%_97%,0_100%)] scroll-mt-25"
+        id="gallery"
       >
         <!-- Lingkaran 1 -->
         <img
@@ -784,7 +808,10 @@
       <!-- TEMPAT BELAJAR SECTION END -->
 
       <!-- CONTACT SECTION START -->
-      <section class="py-20 bg-[#0f2028] text-white" id="contact">
+      <section
+        class="my-16 md:my-24 px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-16 bg-[#0f2028] text-white scroll-mt-20"
+        id="contact"
+      >
         <div class="max-w-6xl mx-auto px-6">
           <div class="text-center mb-12">
             <p class="text-cyan-400 text-base md:text-lg font-medium">
