@@ -165,10 +165,10 @@ const faqLogic = () => {
 
     data.forEach((item) => {
       const html = `<article
-            class="border-t-[1px] border-b-[1px] border-teal-700 py-2 px-1 transition-all duration-300 faq-item"
+            class="border-t-[1px] border-b-[1px] border-teal-700 py-2 px-1 transition-all duration-300 faq-item reveal"
           >
             <div class="flex justify-between">
-              <p class="text-base md:text-lg"> ${item.question} </p>
+              <p class="text-base md:text-lg reveal-paraghrap"> ${item.question} </p>
               <img
                 src="asset/svg/chevron-down-svgrepo-com.svg"
                 alt=""
@@ -176,7 +176,7 @@ const faqLogic = () => {
               />
             </div>
             <p
-              class="text-base md:text-lg hidden opacity-0 transition-all duration-300"
+              class="text-base md:text-lg hidden opacity-0 transition-all duration-300 reveal-paraghrap"
             >
               ${item.answer}
             </p>
@@ -296,3 +296,50 @@ const animasiLogic = () => {
 };
 
 animasiLogic();
+
+const animasiScrollLogic = () => {
+  function animasiScrollSectionAndH() {
+    const containers = document.querySelectorAll(".reveal");
+
+   
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-animasi-scroll");
+        }
+      });
+    });
+
+    containers.forEach((container) => {
+      observer.observe(container);
+     
+      
+    });
+  }
+
+  animasiScrollSectionAndH();
+
+  function animasiScrollParaghrap() {
+    const containers = document.querySelectorAll(".reveal-paraghrap");
+
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-animasi-scroll-paraghrap");
+        }
+      });
+    });
+
+    setTimeout(() => {
+      containers.forEach((container) => {
+        observer.observe(container);
+         container.classList.add("opacity-100");
+      });
+    }, 400);
+  }
+
+  animasiScrollParaghrap();
+};
+
+animasiScrollLogic();
