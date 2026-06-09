@@ -1090,6 +1090,12 @@
     --tw-outline-style: none;
     outline-style: none;
   }
+  .\[clip-path\:polygon\(0_0\%\,100\%_0\,100\%_97\%\,0_100\%\)\] {
+    clip-path: polygon(0 0%,100% 0,100% 97%,0 100%);
+  }
+  .\[clip-path\:polygon\(0_0\%\,100\%_0\,100\%_100\%\,0_100\%\)\] {
+    clip-path: polygon(0 0%,100% 0,100% 100%,0 100%);
+  }
   .\[clip-path\:polygon\(0_0\,100\%_0\,100\%_97\%\,0_100\%\)\] {
     clip-path: polygon(0 0,100% 0,100% 97%,0 100%);
   }
