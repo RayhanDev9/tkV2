@@ -93,6 +93,9 @@ const programLogic = () => {
   const cardProgram = document.querySelectorAll(".card-program");
 
   cardProgram.forEach((card) => {
+    const p = card.querySelector("p");
+    console.info(p);
+    p.classList.add("translate-y-3");
     card.addEventListener("click", () => {
       const h3 = card.querySelector("h3");
       const p = card.querySelector("p");
@@ -108,13 +111,17 @@ const programLogic = () => {
         itemP.classList.add("hidden");
         itemP.classList.remove("opacity-100");
         itemP.classList.add("opacity-0");
+        p.classList.add("translate-y-3");
       });
 
       // buka card yang diklik
       if (!isOpen) {
         p.classList.remove("hidden");
-        p.classList.remove("opacity-0");
-        p.classList.add("opacity-100");
+
+        requestAnimationFrame(() => {
+          p.classList.remove("opacity-0", "translate-y-3");
+          p.classList.add("opacity-100", "translate-y-0");
+        });
       }
     });
   });
@@ -316,9 +323,7 @@ const animasiScrollLogic = () => {
           if (entry.isIntersecting) {
             entry.target.classList.add("opacity-100", "translate-y-0");
             entry.target.classList.remove("opacity-0", "translate-y-3");
-          } else {
-            entry.target.classList.add("opacity-0", "translate-y-3");
-            entry.target.classList.remove("opacity-100", "translate-y-0");
+            observer.unobserve(entry.target);
           }
         });
       },
@@ -352,9 +357,7 @@ const animasiScrollLogic = () => {
           if (entry.isIntersecting) {
             entry.target.classList.add("opacity-100", "translate-y-0");
             entry.target.classList.remove("opacity-0", "translate-y-3");
-          } else {
-            entry.target.classList.add("opacity-0", "translate-y-3");
-            entry.target.classList.remove("opacity-100", "translate-y-0");
+            observer.unobserve(entry.target);
           }
         });
       },
