@@ -361,7 +361,7 @@ const infoLanjutLogic = () => {
   let x = 0;
 
   function animate() {
-    x -= 1; // kecepatan
+    x -= .5; // kecepatan
 
     if (Math.abs(x) >= track.scrollWidth / 2) {
       x = 0;
