@@ -289,6 +289,9 @@
   .left-\[76\%\] {
     left: 76%;
   }
+  .-z-10 {
+    z-index: calc(10 * -1);
+  }
   .z-10 {
     z-index: 10;
   }
@@ -339,6 +342,9 @@
   }
   .mx-auto {
     margin-inline: auto;
+  }
+  .my-2 {
+    margin-block: calc(var(--spacing) * 2);
   }
   .my-3 {
     margin-block: calc(var(--spacing) * 3);
@@ -1247,6 +1253,11 @@
   .focus\:border-cyan-400 {
     &:focus {
       border-color: var(--color-cyan-400);
+    }
+  }
+  .xs\:w-72 {
+    @media (width >= 30rem) {
+      width: calc(var(--spacing) * 72);
     }
   }
   .xs\:w-\[54vh\] {
