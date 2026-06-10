@@ -308,7 +308,7 @@ const infoLanjutLogic = () => {
     },
     {
       vidio: "asset/video/info-lanjut/wadang.mp4",
-      Image: "asset/img/info-lanjut/bermain-ayunan.avif",
+      Image: "asset/img/info-lanjut/foto-bersama.avif",
     },
     {
       vidio: "asset/video/info-lanjut/market-day.mp4",
@@ -360,7 +360,7 @@ const infoLanjutLogic = () => {
   let x = 0;
 
   function animate() {
-    x -= 0.5; // kecepatan
+    x -= 2; // kecepatan
 
     if (Math.abs(x) >= track.scrollWidth / 2) {
       x = 0;
