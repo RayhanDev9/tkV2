@@ -355,12 +355,13 @@ const infoLanjutLogic = () => {
       track.insertAdjacentHTML("beforeend", html);
     });
   }
-  loopingTrack();
 
+  loopingTrack();
+  loopingTrack();
   let x = 0;
 
   function animate() {
-    x -= 2; // kecepatan
+    x -= 1; // kecepatan
 
     if (Math.abs(x) >= track.scrollWidth / 2) {
       x = 0;
