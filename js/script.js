@@ -310,6 +310,22 @@ const infoLanjutLogic = () => {
       vidio: "asset/video/info-lanjut/wadang.mp4",
       Image: "asset/img/info-lanjut/bermain-ayunan.avif",
     },
+    {
+      vidio: "asset/video/info-lanjut/market-day.mp4",
+      Image: "asset/img/info-lanjut/wisuda.avif",
+    },
+    {
+      vidio: "asset/video/info-lanjut/membuat-telor-asin.mp4",
+      Image: "asset/img/info-lanjut/juara-mewarnai.avif",
+    },
+    {
+      vidio: "asset/video/info-lanjut/membuat-playdoh.mp4",
+      Image: "asset/img/info-lanjut/lomba-gambar.avif",
+    },
+    {
+      vidio: "asset/video/info-lanjut/membuat-tempat-pensil.mp4",
+      Image: "asset/img/info-lanjut/menggambar.avif",
+    },
   ];
 
   const track = document.querySelector(".track");
