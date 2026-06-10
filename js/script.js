@@ -94,8 +94,8 @@ const programLogic = () => {
 
   cardProgram.forEach((card) => {
     const p = card.querySelector("p");
-    console.info(p);
     p.classList.add("translate-y-3");
+
     card.addEventListener("click", () => {
       const h3 = card.querySelector("h3");
       const p = card.querySelector("p");
@@ -175,7 +175,7 @@ const faqLogic = () => {
             class="border-t-[1px] border-b-[1px] border-teal-700 py-2 px-1 transition-all duration-300 faq-item reveal"
           >
             <div class="flex justify-between">
-              <p class="text-base md:text-lg reveal-paraghrap"> ${item.question} </p>
+              <p class="text-base md:text-lg"> ${item.question} </p>
               <img
                 src="asset/svg/chevron-down-svgrepo-com.svg"
                 alt=""
@@ -183,7 +183,7 @@ const faqLogic = () => {
               />
             </div>
             <p
-              class="text-base md:text-lg hidden opacity-0 transition-all duration-300 reveal-paraghrap"
+              class="text-base md:text-lg hidden opacity-0 transition-all duration-300"
             >
               ${item.answer}
             </p>
@@ -200,13 +200,16 @@ const faqLogic = () => {
     let lastClickedItem;
     let clickCount = 1;
     faqItem.forEach((item) => {
+      const pHiddden = item.querySelector("article > p");
+      pHiddden.classList.add("translate-y-3");
+
       item.addEventListener("click", function (e) {
         faqItem.forEach((item) => {
           const pHiddden = item.querySelector("article > p");
           const svg = item.querySelector("img");
 
           const isOpen = pHiddden.classList.contains("hidden");
-
+          pHiddden.classList.add("translate-y-3");
           if (!isOpen) {
             pHiddden.classList.add("hidden");
             pHiddden.classList.add("opacity-0");
@@ -221,7 +224,10 @@ const faqLogic = () => {
 
         if (isOpen) {
           pHiddden.classList.remove("hidden");
-          pHiddden.classList.remove("opacity-0");
+          requestAnimationFrame(() => {
+            pHiddden.classList.remove("opacity-0", "translate-y-3");
+            pHiddden.classList.add("opacity-100", "translate-y-0");
+          });
           svg.classList.add("rotate-180");
         } else {
           pHiddden.classList.add("hidden");
@@ -282,8 +288,58 @@ Pesan  : ${textAreaEl.value}
 
 contactLogic();
 
-const animasiLogic = () => {
+const infoLanjutLogic = () => {
+  const data = [
+    {
+      vidio: "asset/video/info-lanjut/cooking-time.mp4",
+      Image: "asset/img/info-lanjut/solat.avif",
+    },
+    {
+      vidio: "asset/video/info-lanjut/kerja-bakti.mp4",
+      Image: "asset/img/info-lanjut/mencuci-piring.avif",
+    },
+    {
+      vidio: "asset/video/info-lanjut/menanam.mp4",
+      Image: "asset/img/info-lanjut/membuat-bunga.avif",
+    },
+    {
+      vidio: "asset/video/info-lanjut/qomat.mp4",
+      Image: "asset/img/info-lanjut/membuat-aci.avif",
+    },
+    {
+      vidio: "asset/video/info-lanjut/wadang.mp4",
+      Image: "asset/img/info-lanjut/bermain-ayunan.avif",
+    },
+  ];
+
   const track = document.querySelector(".track");
+
+  function loopingTrack() {
+    data.forEach((item) => {
+      const html = `
+              <div
+                class="w-28 md:w-36 lg:w-50 aspect-[9/16] rounded-xl overflow-hidden shrink-0"
+              >
+                <video autoplay muted loop
+                  src="${item.vidio}"
+                  class="w-full h-full object-cover"
+                ></video>
+              </div>
+
+              <!-- Foto -->
+              <div
+                class="w-28 md:w-30 lg:w-46 aspect-[3/4] rounded-xl overflow-hidden shrink-0 self-center"
+              >
+                <img
+                  src="${item.Image}"
+                  class="w-full h-full object-cover"
+                />
+              </div>`;
+
+      track.insertAdjacentHTML("beforeend", html);
+    });
+  }
+  loopingTrack();
 
   let x = 0;
 
@@ -302,7 +358,7 @@ const animasiLogic = () => {
   animate();
 };
 
-animasiLogic();
+infoLanjutLogic();
 
 const animasiScrollLogic = () => {
   function animasiScrollSectionAndH() {
